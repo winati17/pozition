@@ -1,8 +1,43 @@
-/* src/pages/LandingPage.css */
+/* Gaya untuk kontainer pencarian */
 .search-container {
   padding: 16px;
   display: flex;
   justify-content: center;
+}
+
+.custom-searchbar {
+  --background: #b31b3e;
+  --border-radius: 20px;
+  --color: white;
+  --icon-color: white;
+  --placeholder-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 0 10px;
+  color: white;
+}
+
+.custom-searchbar .searchbar-input-container {
+  background-color: transparent;
+  border-radius: 20px;
+  border: none;
+  color: white;
+}
+
+.custom-searchbar .searchbar-input {
+  padding-left: 20px;
+  font-size: 16px;
+  color: white;
+}
+
+.custom-searchbar .searchbar-search-icon,
+.custom-searchbar .searchbar-clear-button {
+  color: white;
+  font-size: 1.2em;
+}
+
+.custom-searchbar .searchbar-search-icon {
+  margin-left: 10px;
+  font-size: 1.2em;
 }
 
 .profile-avatar img {
@@ -11,6 +46,7 @@
   border-radius: 50%;
 }
 
+/* Gaya untuk kartu venue */
 .venue-card-container {
   display: flex;
   flex-direction: column;
@@ -19,7 +55,7 @@
 }
 
 .venue-card {
-  background-color: #b31b3e; 
+  background-color: #b31b3e;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -33,4 +69,76 @@
 
 .venue-card ion-card-content {
   color: white;
+}
+
+/* Gaya untuk Hero Section */
+.hero-section {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  filter: brightness(50%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.hero-button {
+  margin-top: 20px;
+}
+
+/* Gaya untuk Features Section */
+.features-section {
+  padding: 40px 16px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.features-section h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.features-section p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Gaya untuk Testimonials Section */
+.testimonials-section {
+  padding: 40px 16px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  margin-bottom: 20px;
+}
+
+.testimonials-section ion-card {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.footer-text {
+  text-align: center;
+  width: 100%;
 }
