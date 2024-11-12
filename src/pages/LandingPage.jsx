@@ -1,16 +1,14 @@
-
 import React from 'react';
 import {
   IonContent,
   IonHeader,
   IonPage,
-  IonTitle,
+  IonSearchbar,
+  IonCard,
+  IonCardContent,
+  IonAvatar,
   IonToolbar,
-  IonButton,
-  IonImg,
-  IonText
 } from '@ionic/react';
-
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -18,20 +16,34 @@ const LandingPage = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Penyewaan Venue</IonTitle>
+          <IonAvatar slot="end" className="profile-avatar">
+            <img src="./src/pages/profile.png" alt="Profile" />
+          </IonAvatar>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="landing-content">
-        <IonImg src="assets/venue.jpg" />
-        <IonText color="primary">
-          <h1>Temukan Venue Terbaik untuk Acara Anda</h1>
-        </IonText>
-        <IonText>
-          <p>Kami menyediakan berbagai pilihan venue untuk memenuhi kebutuhan acara Anda.</p>
-        </IonText>
-        <IonButton expand="block" routerLink="/daftar-venue">
-          Lihat Daftar Venue
-        </IonButton>
+      <IonContent fullscreen>
+        <div className="search-container">
+          <IonSearchbar placeholder="Cari venue" />
+        </div>
+        <div className="venue-card-container">
+          <IonCard className="venue-card">
+            <img src="./src/pages/venue.png" alt="Venue" />
+            <IonCardContent>
+              <p>Deskripsi Venue</p>
+            </IonCardContent>
+          </IonCard>
+          {/* Duplicate IonCard for additional cards */}
+          <IonCard className="venue-card">
+            <IonCardContent>
+              <p>Venue Lainnya</p>
+            </IonCardContent>
+          </IonCard>
+          <IonCard className="venue-card">
+            <IonCardContent>
+              <p>Venue Lainnya</p>
+            </IonCardContent>
+          </IonCard>
+        </div>
       </IonContent>
     </IonPage>
   );
