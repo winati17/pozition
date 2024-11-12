@@ -6,7 +6,6 @@ import LandingPage from './pages/LandingPage';
 import OrderPage from './pages/OrderPage';
 
 import '@ionic/react/css/core.css';
-
 import './theme/variables.css';
 
 const App = () => (
@@ -16,10 +15,10 @@ const App = () => (
         <Route exact path="/landing" component={LandingPage} />
         <Redirect exact from="/" to="/landing" />
         <Route exact path="/order" component={OrderPage} />
-        <Redirect exact from="/" to="/order" />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
 );
 
 export default App;
+
