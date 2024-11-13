@@ -1,82 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-
 body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Gaya untuk kontainer pencarian */
-.search-container {
-  padding: 16px;
+/* Header */
+.custom-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.custom-searchbar {
-  --background: #b31b3e;
-  --border-radius: 20px;
-  --color: white;
-  --icon-color: white;
-  --placeholder-color: rgba(255, 255, 255, 0.7);
-  border-radius: 20px;
-  padding: 0 10px;
-  color: white;
+ion-content {
+  --padding: 0px;
 }
 
-.custom-searchbar .searchbar-input-container {
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #b31b3e;
+}
+
+.logo .highlight {
+  color: #a01838; /* Darker shade to emphasize */
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  font-size: 1em;
+  color: #b31b3e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link.active {
   background-color: #b31b3e;
+  color: #fff;
+  padding: 5px 15px;
   border-radius: 20px;
-  border: none;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #b31b3e, #d6336c); /* Red gradient */
   color: white;
+}
+
+.hero-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Custom Search Bar */
+.custom-searchbar {
+  --background: #fff;
+  --color: #b31b3e;
+  --border-radius: 30px;
+  --placeholder-color: #b31b3e;
+  --icon-color: #b31b3e;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .custom-searchbar .searchbar-input {
-  padding-left: 20px;
-  font-size: 16px;
-  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
 }
 
-.custom-searchbar .searchbar-search-icon,
-.custom-searchbar .searchbar-clear-button {
-  color: white;
-  font-size: 1.2em;
+/* Adjustments for Search Icon */
+.custom-searchbar .searchbar-icon {
+  color: #b31b3e;
 }
 
-.custom-searchbar .searchbar-search-icon {
-  margin-left: 10px;
-  font-size: 1.2em;
+.custom-searchbar .searchbar-clear-icon {
+  display: none; /* Remove clear icon if not needed */
 }
 
-/* Hero section styling */
-.hero-section {
-  position: relative;
-  text-align: center;
-  padding: 40px 16px;
-  background-color: #f1f1f1; /* Light background color to separate from other sections */
-  color: white;
-  margin: 50px;
-}
-
-.hero-text h1 {
-  font-size: 2em;
-  margin: 0;
-  color: #333;
-}
-
-.hero-text p {
-  font-size: 1.2em;
-  margin: 10px 0;
-  color: #555;
-}
-
-.hero-button {
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
-}
-
-.profile-avatar img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
 }
 
 /* Features section styling */
@@ -181,12 +196,12 @@ body {
 }
 
 .tag {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #e91e63;
   color: white;
-  padding: 4px 8px;
+  padding: 2px 8px;
   border-radius: 8px;
   font-size: 0.8em;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 /* Venue Card Content Styling */

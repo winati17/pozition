@@ -25,25 +25,26 @@ const LandingPage = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonAvatar slot="end" className="profile-avatar">
-            <img src="./src/components/profile.png" alt="Profil" />
-          </IonAvatar>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <div className="search-container">
-          <IonSearchbar placeholder="Cari venue" className="custom-searchbar" />
+        <div className="custom-header">
+          <div className="logo">po<span className="highlight">Zition</span></div>
+          <nav className="navbar">
+            <a href="#" className="nav-link active">Home</a>
+            <a href="#" className="nav-link">Venue</a>
+            <a href="#" className="nav-link">Order</a>
+            <a href="#" className="nav-link">Masuk/Daftar</a>
+          </nav>
         </div>
+      </IonHeader>
+
+      <IonContent>
         {/* Hero Section */}
         <div className="hero-section">
-          {/* <img src="./src/components/hero-image.jpg" alt="Hero" className="hero-image" /> */}
-          <div className="hero-text">
-            <h1>Temukan Venue Sempurna Anda</h1>
-            <p>Temukan dan pesan venue yang menakjubkan untuk acara Anda</p>
-            <IonButton color="light" className="hero-button">Mulai Sekarang</IonButton>
+          <h1 className="hero-title">TEMUKAN VENUE YANG TEPAT</h1>
+          <div className="search-container">
+            <IonSearchbar placeholder="Cari Venue" className="custom-searchbar" />
           </div>
         </div>
+
         {/* Features Section */}
         <div className="features-section">
           <IonGrid>
