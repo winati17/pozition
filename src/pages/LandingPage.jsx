@@ -3,47 +3,57 @@ import {
   IonContent,
   IonHeader,
   IonPage,
-  IonSearchbar,
   IonCard,
   IonCardContent,
-  IonAvatar,
   IonToolbar,
   IonGrid,
   IonRow,
   IonCol,
-  IonButton,
   IonFooter,
   IonIcon,
   IonText,
+  IonRouterLink,
 } from '@ionic/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { star, peopleCircle, cash } from 'ionicons/icons';
+import { star, peopleCircle, cash, searchOutline } from 'ionicons/icons';
 import './LandingPage.css';
 
 const LandingPage = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonAvatar slot="end" className="profile-avatar">
-            <img src="./src/components/profile.png" alt="Profil" />
-          </IonAvatar>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <div className="search-container">
-          <IonSearchbar placeholder="Cari venue" className="custom-searchbar" />
+        <div className="custom-header">
+          <div className="logo">poZition</div>
+          <nav className="navbar">
+            <IonRouterLink routerLink="/landing" className="nav-link active">
+              Home
+            </IonRouterLink>
+            <IonRouterLink routerLink="/venue" className="nav-link">
+              Venue
+            </IonRouterLink>
+            <IonRouterLink routerLink="/order" className="nav-link">
+              Order
+            </IonRouterLink>
+            <IonRouterLink routerLink="/login" className="nav-link">
+              Masuk/Daftar
+            </IonRouterLink>
+          </nav>
         </div>
+      </IonHeader>
+
+      <IonContent>
         {/* Hero Section */}
         <div className="hero-section">
-          {/* <img src="./src/components/hero-image.jpg" alt="Hero" className="hero-image" /> */}
-          <div className="hero-text">
-            <h1>Temukan Venue Sempurna Anda</h1>
-            <p>Temukan dan pesan venue yang menakjubkan untuk acara Anda</p>
-            <IonButton color="light" className="hero-button">Mulai Sekarang</IonButton>
-          </div>
-        </div>
+    <h1 className="hero-title">TEMUKAN VENUE YANG TEPAT</h1>
+    <div className="search-container">
+      <input type="text" placeholder="Cari Venue" className="custom-input" />
+      <button className="search-button">
+      <IonIcon icon={searchOutline} className="search-icon" />
+      </button>
+    </div>
+  </div>
+
         {/* Features Section */}
         <div className="features-section">
           <IonGrid>
@@ -66,60 +76,89 @@ const LandingPage = () => {
             </IonRow>
           </IonGrid>
         </div>
-        {/* Venue Cards */}
-        <div className="venue-card-container">
-          <IonCard className="venue-card">
-            <img src="./src/components/event1.jpg" alt="Venue" />
-            <IonCardContent>
-              <p>Deskripsi Venue</p>
-            </IonCardContent>
-          </IonCard>
-          <IonCard className="venue-card">
-          <img src="./src/components/event2.jpg" alt="Venue" />
-            <IonCardContent>
-              <p>Venue Lainnya</p>
-            </IonCardContent>
-          </IonCard>
-          <IonCard className="venue-card">
-          <img src="./src/components/event3.jpg" alt="Venue" />
-            <IonCardContent>
-              <p>Venue Lainnya</p>
-            </IonCardContent>
-          </IonCard>
-        </div>
-        {/* Testimonials Section */}
-        <div className="testimonials-section">
-          <h2>Apa Kata Pelanggan Kami</h2>
-          <Swiper
-            spaceBetween={50}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-          >
-            <SwiperSlide>
-              <IonCard>
-                <IonCardContent>
-                  <p>"Pengalaman luar biasa, menemukan venue yang sempurna!"</p>
-                  <p>- John Doe</p>
-                </IonCardContent>
-              </IonCard>
-            </SwiperSlide>
-            <SwiperSlide>
-              <IonCard>
-                <IonCardContent>
-                  <p>"Mudah digunakan dan pilihan yang banyak."</p>
-                  <p>- Jane Smith</p>
-                </IonCardContent>
-              </IonCard>
-            </SwiperSlide>
-          </Swiper>
+        <div className="venue-section">
+          <div className="venue-header">
+            <h2 className="venue-title">Venue Populer</h2>
+            <IonRouterLink routerLink="/venue" className="view-more"> Lihat selengkapnya </IonRouterLink>
+          </div>
+          <IonGrid className="venue-card-container">
+            <IonRow>
+              <IonCol size="12" sizeMd="6">
+                <IonCard className="venue-card">
+                  <div className="image-container">
+                    <img src="./src/components/event1.jpg" alt="Upperhills Convention Hall" />
+                    <div className="category-tags">
+                      <span className="tag">Pesta</span>
+                      <span className="tag">Dine-in</span>
+                    </div>
+                  </div>
+                  <IonCardContent className="venue-card-content">
+                    <h3>Upperhills Convention Hall</h3>
+                    <p>Jl. Metro Tj. Bunga No.995, Maccini, Kec. Makassar, Sulawesi Selatan 90242</p>
+                    <p>Rp8.000.000,00/hari</p>
+                    <button className="order-button">Pesan Sekarang</button>
+                  </IonCardContent>
+                </IonCard>
+              </IonCol>
+
+              <IonCol size="12" sizeMd="6">
+                <IonCard className="venue-card">
+                  <div className="image-container">
+                    <img src="./src/components/event2.jpg" alt="Lasaran Garden" />
+                    <div className="category-tags">
+                      <span className="tag">Pesta</span>
+                      <span className="tag">Dine-in</span>
+                    </div>
+                  </div>
+                  <IonCardContent className="venue-card-content">
+                    <h3>Lasaran Garden</h3>
+                    <p>Jl. A. Daeng Sirua No.108, Masale, Kec. Panakkukang, Sulawesi Selatan 90231</p>
+                    <p>Rp8.000.000,00/hari</p>
+                    <button className="order-button">Pesan Sekarang</button>
+                  </IonCardContent>
+                </IonCard>
+              </IonCol>
+
+              <IonCol size="12" sizeMd="6">
+                <IonCard className="venue-card">
+                  <div className="image-container">
+                    <img src="./src/components/event3.jpg" alt="The Culture Club Makassar" />
+                    <div className="category-tags">
+                      <span className="tag">Pesta</span>
+                      <span className="tag">Dine-in</span>
+                    </div>
+                  </div>
+                  <IonCardContent className="venue-card-content">
+                    <h3>The Culture Club Makassar</h3>
+                    <p>Jl. Gontang Raya No.15, Tamalate, Kota Makassar, Sulawesi Selatan 90242</p>
+                    <p>Rp8.000.000,00/hari</p>
+                    <button className="order-button">Pesan Sekarang</button>
+                  </IonCardContent>
+                </IonCard>
+              </IonCol>
+
+              <IonCol size="12" sizeMd="6">
+                <IonCard className="venue-card">
+                  <div className="image-container">
+                    <img src="./src/components/event4.jpeg" alt="Four.venue" />
+                    <div className="category-tags">
+                      <span className="tag">Pesta</span>
+                      <span className="tag">Dine-in</span>
+                    </div>
+                  </div>
+                  <IonCardContent className="venue-card-content">
+                    <h3>Four.venue</h3>
+                    <p>Jl. Masjid H Salimah, Tamalanrea Jaya, Kec. Tamalanrea, Sulawesi Selatan</p>
+                    <p>Rp8.000.000,00/hari</p>
+                    <button className="order-button">Pesan Sekarang</button>
+                  </IonCardContent>
+                </IonCard>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
         </div>
       </IonContent>
-      <IonFooter>
-        <IonToolbar>
-          <IonText className="footer-text">&copy; 2023 Sewa Venue</IonText>
-        </IonToolbar>
-      </IonFooter>
-    </IonPage>
+    </IonPage >
   );
 };
 

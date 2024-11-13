@@ -4,6 +4,7 @@ import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import LandingPage from './pages/LandingPage';
 import OrderPage from './pages/OrderPage';
+import Venue from './pages/Venue';
 
 import '@ionic/react/css/core.css';
 import './theme/variables.css';
@@ -14,6 +15,7 @@ const App = () => (
       <IonRouterOutlet>
         <Route exact path="/landing" component={LandingPage} />
         <Redirect exact from="/" to="/landing" />
+        <Route exact path="/venue" component={Venue} />
         <Route exact path="/order" component={OrderPage} />
       </IonRouterOutlet>
     </IonReactRouter>
