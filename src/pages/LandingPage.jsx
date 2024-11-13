@@ -112,7 +112,7 @@ const LandingPage = () => {
                   </div>
                   <IonCardContent className="venue-card-content">
                     <h3>Lasaran Garden</h3>
-                    <p>Jl. Abdullah Daeng Sirua No.108, Masale, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231</p>
+                    <p>Jl. A. Daeng Sirua No.108, Masale, Kec. Panakkukang, Sulawesi Selatan 90231</p>
                     <p>Rp8.000.000,00/hari</p>
                     <button className="order-button">Pesan Sekarang</button>
                   </IonCardContent>
@@ -148,7 +148,7 @@ const LandingPage = () => {
                   </div>
                   <IonCardContent className="venue-card-content">
                     <h3>Four.venue</h3>
-                    <p>Jl. Masjid H Salimah, Tamalanrea Jaya, Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan 90245</p>
+                    <p>Jl. Masjid H Salimah, Tamalanrea Jaya, Kec. Tamalanrea, Sulawesi Selatan</p>
                     <p>Rp8.000.000,00/hari</p>
                     <button className="order-button">Pesan Sekarang</button>
                   </IonCardContent>

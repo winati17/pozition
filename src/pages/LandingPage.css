@@ -31,24 +31,22 @@ body {
   color: #b31b3e;
   text-decoration: none;
   font-weight: 300;
-  padding: 5px 10px; /* Adds padding for better spacing */
+  padding: 5px 10px; 
   display: flex;
-  align-items: center; /* Centers text within each link */
-  line-height: 1; /* Ensures no extra vertical spacing */
+  align-items: center; 
 }
 
 .nav-link.active {
   background-color: #b31b3e;
   color: #fff;
-  padding: 5px 15px;
+  padding: 4px 15px;
   border-radius: 20px;
 }
 
-/* Hero Section */
 .hero-section {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(to bottom, #b31b3e, #d6336c); /* Red gradient */
+  background: linear-gradient(to bottom, #b31b3e, #d6336c); 
   color: white;
 }
 
@@ -72,7 +70,7 @@ body {
   width: 100%;
   height: 50px;
   border: none;
-  border-radius: 30px 0 0 30px; /* Rounded left edges */
+  border-radius: 30px 0 0 30px; 
   padding: 0 20px;
   font-size: 1.1em;
   background-color: #f3f3f3;
@@ -84,13 +82,12 @@ body {
   color: #b31b3e;
 }
 
-/* Search Button Styling */
 .search-button {
   height: 50px;
   width: 50px;
   background-color: #f3f3f3;
   border: none;
-  border-radius: 0 30px 30px 0; /* Rounded right edges */
+  border-radius: 0 30px 30px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,7 +113,6 @@ body {
   color: #333;
 }
 
-/* Features section styling */
 .features-section {
   padding: 20px 16px;
   background-color: #f7f7f7;
@@ -134,14 +130,11 @@ body {
   color: #666;
 }
 
-/* Styling for grid columns in features section */
 .features-section ion-col {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-/* Venue Page Container styling */
 
 .venue-section {
   padding: 16px;
@@ -168,12 +161,10 @@ body {
   font-weight: normal;
 }
 
-/* Venue Card Container */
 .venue-card-container {
   padding: 0px;
 }
 
-/* Venue Card Styling */
 .venue-card {
   background-color: #b31b3e;
   color: white;
@@ -184,7 +175,6 @@ body {
   height: 350px;
 }
 
-/* Image Container with Category Tags */
 .image-container {
   position: relative;
 }
@@ -197,7 +187,6 @@ body {
   border-top-right-radius: 15px;
 }
 
-/* Category Tags Styling */
 .category-tags {
   position: absolute;
   top: 8px;
@@ -215,7 +204,6 @@ body {
   font-weight: 300;
 }
 
-/* Venue Card Content Styling */
 .venue-card-content {
   padding: 16px;
   display: flex;
@@ -234,7 +222,6 @@ body {
   margin: 4px 0;
 }
 
-/* Venue Card Button Styling */
 .order-button {
   align-self: flex-end;
   background-color: #ffffff;
@@ -253,8 +240,6 @@ body {
   background-color: #f0f0f0;
 }
 
-
-/* Gaya untuk Hero Section */
 .hero-section {
   position: relative;
   text-align: center;
@@ -275,7 +260,6 @@ body {
   margin-top: 20px;
 }
 
-/* Gaya untuk Features Section */
 .features-section {
   padding: 40px 16px;
   background-color: #f7f7f7;
@@ -292,31 +276,8 @@ body {
   color: #666;
 }
 
-/* Gaya untuk Testimonials Section */
-.testimonials-section {
-  padding: 40px 16px;
-  background-color: #fff;
-  text-align: center;
-}
-
-.testimonials-section h2 {
-  margin-bottom: 20px;
-}
-
-.testimonials-section ion-card {
-  margin: 0 auto;
-  max-width: 600px;
-}
-
 .footer-text {
   text-align: center;
   width: 100%;
   padding: 16px 0;
-}
-
-/* Responsive layout: two columns on larger screens */
-@media (min-width: 768px) {
-  .venue-card-container {
-    grid-template-columns: 1fr 1fr 1fr; 
-  }
 }

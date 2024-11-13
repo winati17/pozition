@@ -23,7 +23,7 @@ const Venue = () => {
         <div className="custom-header">
           <div className="logo">poZition</div>
           <nav className="navbar">
-          <IonRouterLink routerLink="/landing" className="nav-link">
+            <IonRouterLink routerLink="/landing" className="nav-link">
               Home
             </IonRouterLink>
             <IonRouterLink routerLink="/venue" className="nav-link active">
@@ -74,8 +74,8 @@ const Venue = () => {
                   </div>
                 </div>
                 <IonCardContent className="venue-card-content">
-                  <h3>Lasaran Garden</h3>
-                  <p>Jl. Abdullah Daeng Sirua No.108, Masale, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231</p>
+                <h3>Lasaran Garden</h3>
+                  <p>Jl. A. Daeng Sirua No.108, Masale, Kec. Panakkukang, Sulawesi Selatan 90231</p>
                   <p>Rp8.000.000,00/hari</p>
                   <button className="order-button">Pesan Sekarang</button>
                 </IonCardContent>
@@ -111,7 +111,7 @@ const Venue = () => {
                 </div>
                 <IonCardContent className="venue-card-content">
                   <h3>Four.venue</h3>
-                  <p>Jl. Masjid H Salimah, Tamalanrea Jaya, Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan 90245</p>
+                  <p>Jl. Masjid H Salimah, Tamalanrea Jaya, Kec. Tamalanrea, Sulawesi Selatan</p>
                   <p>Rp8.000.000,00/hari</p>
                   <button className="order-button">Pesan Sekarang</button>
                 </IonCardContent>
@@ -147,7 +147,7 @@ const Venue = () => {
                 </div>
                 <IonCardContent className="venue-card-content">
                   <h3>Lasaran Garden</h3>
-                  <p>Jl. Abdullah Daeng Sirua No.108, Masale, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231</p>
+                  <p>Jl. A. Daeng Sirua No.108, Masale, Kec. Panakkukang, Sulawesi Selatan 90231</p>
                   <p>Rp8.000.000,00/hari</p>
                   <button className="order-button">Pesan Sekarang</button>
                 </IonCardContent>
@@ -182,8 +182,8 @@ const Venue = () => {
                   </div>
                 </div>
                 <IonCardContent className="venue-card-content">
-                  <h3>Four.venue</h3>
-                  <p>Jl. Masjid H Salimah, Tamalanrea Jaya, Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan 90245</p>
+                <h3>Four.venue</h3>
+                  <p>Jl. Masjid H Salimah, Tamalanrea Jaya, Kec. Tamalanrea, Sulawesi Selatan</p>
                   <p>Rp8.000.000,00/hari</p>
                   <button className="order-button">Pesan Sekarang</button>
                 </IonCardContent>
