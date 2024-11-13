@@ -1,16 +1,24 @@
-
 import React from 'react';
 import {
   IonContent,
   IonHeader,
   IonPage,
-  IonTitle,
+  IonSearchbar,
+  IonCard,
+  IonCardContent,
+  IonAvatar,
   IonToolbar,
+  IonGrid,
+  IonRow,
+  IonCol,
   IonButton,
-  IonImg,
-  IonText
+  IonFooter,
+  IonIcon,
+  IonText,
 } from '@ionic/react';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { star, peopleCircle, cash } from 'ionicons/icons';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -18,21 +26,99 @@ const LandingPage = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Penyewaan Venue</IonTitle>
+          <IonAvatar slot="end" className="profile-avatar">
+            <img src="./src/components/profile.png" alt="Profil" />
+          </IonAvatar>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="landing-content">
-        <IonImg src="assets/venue.jpg" />
-        <IonText color="primary">
-          <h1>Temukan Venue Terbaik untuk Acara Anda</h1>
-        </IonText>
-        <IonText>
-          <p>Kami menyediakan berbagai pilihan venue untuk memenuhi kebutuhan acara Anda.</p>
-        </IonText>
-        <IonButton expand="block" routerLink="/daftar-venue">
-          Lihat Daftar Venue
-        </IonButton>
+      <IonContent fullscreen>
+        <div className="search-container">
+          <IonSearchbar placeholder="Cari venue" className="custom-searchbar" />
+        </div>
+        {/* Hero Section */}
+        <div className="hero-section">
+          {/* <img src="./src/components/hero-image.jpg" alt="Hero" className="hero-image" /> */}
+          <div className="hero-text">
+            <h1>Temukan Venue Sempurna Anda</h1>
+            <p>Temukan dan pesan venue yang menakjubkan untuk acara Anda</p>
+            <IonButton color="light" className="hero-button">Mulai Sekarang</IonButton>
+          </div>
+        </div>
+        {/* Features Section */}
+        <div className="features-section">
+          <IonGrid>
+            <IonRow>
+              <IonCol>
+                <IonIcon icon={star} size="large" />
+                <h3>Venue Terbaik</h3>
+                <p>Kami menawarkan venue dengan rating tertinggi.</p>
+              </IonCol>
+              <IonCol>
+                <IonIcon icon={peopleCircle} size="large" />
+                <h3>Host Terpercaya</h3>
+                <p>Terhubung dengan pemilik venue yang terpercaya.</p>
+              </IonCol>
+              <IonCol>
+                <IonIcon icon={cash} size="large" />
+                <h3>Harga Terjangkau</h3>
+                <p>Dapatkan penawaran terbaik untuk pemesanan venue.</p>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        </div>
+        {/* Venue Cards */}
+        <div className="venue-card-container">
+          <IonCard className="venue-card">
+            <img src="./src/components/event1.jpg" alt="Venue" />
+            <IonCardContent>
+              <p>Deskripsi Venue</p>
+            </IonCardContent>
+          </IonCard>
+          <IonCard className="venue-card">
+          <img src="./src/components/event2.jpg" alt="Venue" />
+            <IonCardContent>
+              <p>Venue Lainnya</p>
+            </IonCardContent>
+          </IonCard>
+          <IonCard className="venue-card">
+          <img src="./src/components/event3.jpg" alt="Venue" />
+            <IonCardContent>
+              <p>Venue Lainnya</p>
+            </IonCardContent>
+          </IonCard>
+        </div>
+        {/* Testimonials Section */}
+        <div className="testimonials-section">
+          <h2>Apa Kata Pelanggan Kami</h2>
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+          >
+            <SwiperSlide>
+              <IonCard>
+                <IonCardContent>
+                  <p>"Pengalaman luar biasa, menemukan venue yang sempurna!"</p>
+                  <p>- John Doe</p>
+                </IonCardContent>
+              </IonCard>
+            </SwiperSlide>
+            <SwiperSlide>
+              <IonCard>
+                <IonCardContent>
+                  <p>"Mudah digunakan dan pilihan yang banyak."</p>
+                  <p>- Jane Smith</p>
+                </IonCardContent>
+              </IonCard>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </IonContent>
+      <IonFooter>
+        <IonToolbar>
+          <IonText className="footer-text">&copy; 2023 Sewa Venue</IonText>
+        </IonToolbar>
+      </IonFooter>
     </IonPage>
   );
 };
