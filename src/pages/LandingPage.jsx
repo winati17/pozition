@@ -18,6 +18,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { star, peopleCircle, cash, searchOutline } from 'ionicons/icons';
 import './LandingPage.css';
+import Footer from '../components/Footer/Footer'
 
 const LandingPage = () => {
   return (
@@ -158,7 +159,9 @@ const LandingPage = () => {
           </IonGrid>
         </div>
       </IonContent>
-    </IonPage >
+  
+      <Footer/>
+    </IonPage>
   );
 };
 
