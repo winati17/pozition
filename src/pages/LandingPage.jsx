@@ -3,7 +3,6 @@ import {
   IonContent,
   IonHeader,
   IonPage,
-  IonSearchbar,
   IonCard,
   IonCardContent,
   IonToolbar,
@@ -17,7 +16,7 @@ import {
 } from '@ionic/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { star, peopleCircle, cash } from 'ionicons/icons';
+import { star, peopleCircle, cash, searchOutline } from 'ionicons/icons';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -27,10 +26,18 @@ const LandingPage = () => {
         <div className="custom-header">
           <div className="logo">poZition</div>
           <nav className="navbar">
-            <a href="#" className="nav-link active">Home</a>
-            <a href="#" className="nav-link">Venue</a>
-            <a href="#" className="nav-link">Order</a>
-            <a href="#" className="nav-link">Masuk/Daftar</a>
+            <IonRouterLink routerLink="/landing" className="nav-link active">
+              Home
+            </IonRouterLink>
+            <IonRouterLink routerLink="/venue" className="nav-link">
+              Venue
+            </IonRouterLink>
+            <IonRouterLink routerLink="/order" className="nav-link">
+              Order
+            </IonRouterLink>
+            <IonRouterLink routerLink="/login" className="nav-link">
+              Masuk/Daftar
+            </IonRouterLink>
           </nav>
         </div>
       </IonHeader>
@@ -38,11 +45,14 @@ const LandingPage = () => {
       <IonContent>
         {/* Hero Section */}
         <div className="hero-section">
-          <h1 className="hero-title">TEMUKAN VENUE YANG TEPAT</h1>
-          <div className="search-container">
-            <IonSearchbar placeholder="Cari Venue" className="custom-searchbar" />
-          </div>
-        </div>
+    <h1 className="hero-title">TEMUKAN VENUE YANG TEPAT</h1>
+    <div className="search-container">
+      <input type="text" placeholder="Cari Venue" className="custom-input" />
+      <button className="search-button">
+      <IonIcon icon={searchOutline} className="search-icon" />
+      </button>
+    </div>
+  </div>
 
         {/* Features Section */}
         <div className="features-section">
@@ -69,9 +79,7 @@ const LandingPage = () => {
         <div className="venue-section">
           <div className="venue-header">
             <h2 className="venue-title">Venue Populer</h2>
-            <IonRouterLink routerLink="/venue" className="view-more">
-              Lihat selengkapnya
-            </IonRouterLink>
+            <IonRouterLink routerLink="/venue" className="view-more"> Lihat selengkapnya </IonRouterLink>
           </div>
           <IonGrid className="venue-card-container">
             <IonRow>
@@ -149,39 +157,7 @@ const LandingPage = () => {
             </IonRow>
           </IonGrid>
         </div>
-
-        {/* Testimonials Section */}
-        <div className="testimonials-section">
-          <h2>Apa Kata Pelanggan Kami</h2>
-          <Swiper
-            spaceBetween={50}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-          >
-            <SwiperSlide>
-              <IonCard>
-                <IonCardContent>
-                  <p>"Pengalaman luar biasa, menemukan venue yang sempurna!"</p>
-                  <p>- John Doe</p>
-                </IonCardContent>
-              </IonCard>
-            </SwiperSlide>
-            <SwiperSlide>
-              <IonCard>
-                <IonCardContent>
-                  <p>"Mudah digunakan dan pilihan yang banyak."</p>
-                  <p>- Jane Smith</p>
-                </IonCardContent>
-              </IonCard>
-            </SwiperSlide>
-          </Swiper>
-        </div>
       </IonContent>
-      <IonFooter>
-        <IonToolbar>
-          <IonText className="footer-text">&copy; 2023 Sewa Venue</IonText>
-        </IonToolbar>
-      </IonFooter>
     </IonPage >
   );
 };
