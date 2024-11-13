@@ -66,27 +66,64 @@ const LandingPage = () => {
             </IonRow>
           </IonGrid>
         </div>
-        {/* Venue Cards */}
-        <div className="venue-card-container">
-          <IonCard className="venue-card">
-            <img src="./src/components/event1.jpg" alt="Venue" />
-            <IonCardContent>
-              <p>Deskripsi Venue</p>
-            </IonCardContent>
-          </IonCard>
-          <IonCard className="venue-card">
-          <img src="./src/components/event2.jpg" alt="Venue" />
-            <IonCardContent>
-              <p>Venue Lainnya</p>
-            </IonCardContent>
-          </IonCard>
-          <IonCard className="venue-card">
-          <img src="./src/components/event3.jpg" alt="Venue" />
-            <IonCardContent>
-              <p>Venue Lainnya</p>
-            </IonCardContent>
-          </IonCard>
+        <div className="venue-section">
+          <div className="venue-header">
+            <h2 className="venue-title">Venue Populer</h2>
+            <a href="#" className="view-more">Lihat selengkapnya</a>
+          </div>
+          <IonGrid className="venue-card-container">
+            <IonRow>
+              <IonCol size="12" sizeMd="6">
+                <IonCard className="venue-card">
+                  <img src="./src/components/event1.jpg" alt="Upperhills Convention Hall" />
+                  <IonCardContent>
+                    <h3>Upperhills Convention Hall</h3>
+                    <p>Jl. Metro Tj. Bunga No.995, Maccini, Kec. Makassar, Sulawesi Selatan 90242</p>
+                    <p>Rp8.000.000,00/hari</p>
+                    <IonButton color="light" fill="solid" className="order-button">Pesan Sekarang</IonButton>
+                  </IonCardContent>
+                </IonCard>
+              </IonCol>
+
+              <IonCol size="12" sizeMd="6">
+                <IonCard className="venue-card">
+                  <img src="./src/components/event2.jpg" alt="Lasaran Garden" />
+                  <IonCardContent>
+                    <h3>Lasaran Garden</h3>
+                    <p>Jl. Abdullah Daeng Sirua No.108, Masale, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231</p>
+                    <p>Rp8.000.000,00/hari</p>
+                    <IonButton color="danger" fill="solid">Pesan Sekarang</IonButton>
+                  </IonCardContent>
+                </IonCard>
+              </IonCol>
+
+              <IonCol size="12" sizeMd="6">
+                <IonCard className="venue-card">
+                  <img src="./src/components/event3.jpg" alt="The Culture Club Makassar" />
+                  <IonCardContent>
+                    <h3>The Culture Club Makassar</h3>
+                    <p>Jl. Gontang Raya No.15, Tamalate, Kota Makassar, Sulawesi Selatan 90242</p>
+                    <p>Rp8.000.000,00/hari</p>
+                    <IonButton color="danger" fill="solid">Pesan Sekarang</IonButton>
+                  </IonCardContent>
+                </IonCard>
+              </IonCol>
+
+              <IonCol size="12" sizeMd="6">
+                <IonCard className="venue-card">
+                  <img src="./src/components/event4.jpeg" alt="Four.venue" />
+                  <IonCardContent>
+                    <h3>Four.venue</h3>
+                    <p>Jl. Masjid H Salimah, Tamalanrea Jaya, Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan 90245</p>
+                    <p>Rp8.000.000,00/hari</p>
+                    <IonButton color="danger" fill="solid">Pesan Sekarang</IonButton>
+                  </IonCardContent>
+                </IonCard>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
         </div>
+
         {/* Testimonials Section */}
         <div className="testimonials-section">
           <h2>Apa Kata Pelanggan Kami</h2>
@@ -119,7 +156,7 @@ const LandingPage = () => {
           <IonText className="footer-text">&copy; 2023 Sewa Venue</IonText>
         </IonToolbar>
       </IonFooter>
-    </IonPage>
+    </IonPage >
   );
 };
 
