@@ -142,11 +142,12 @@ body {
   font-weight: normal;
 }
 
-/* Venue Card Container styling */
+/* Venue Card Container */
 .venue-card-container {
   padding: 0px;
 }
 
+/* Venue Card Styling */
 .venue-card {
   background-color: #b31b3e;
   color: white;
@@ -157,7 +158,12 @@ body {
   height: 350px;
 }
 
-.venue-card img {
+/* Image Container with Category Tags */
+.image-container {
+  position: relative;
+}
+
+.image-container img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -165,7 +171,26 @@ body {
   border-top-right-radius: 15px;
 }
 
-.venue-card ion-card-content {
+/* Category Tags Styling */
+.category-tags {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.tag {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/* Venue Card Content Styling */
+.venue-card-content {
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -182,6 +207,23 @@ body {
   font-size: 0.9em;
   margin: 4px 0;
 }
+
+/* Venue Card Button Styling */
+.order-button {
+  background-color: #ffffff; /* White background */
+  color: #b31b3e; /* Red text color */
+  border: 1px solid #b31b3e; /* Red border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 0.9em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #f0f0f0; 
+}
+
 
 /* Gaya untuk Hero Section */
 .hero-section {

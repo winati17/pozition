@@ -75,48 +75,72 @@ const LandingPage = () => {
             <IonRow>
               <IonCol size="12" sizeMd="6">
                 <IonCard className="venue-card">
-                  <img src="./src/components/event1.jpg" alt="Upperhills Convention Hall" />
-                  <IonCardContent>
+                  <div className="image-container">
+                    <img src="./src/components/event1.jpg" alt="Upperhills Convention Hall" />
+                    <div className="category-tags">
+                      <span className="tag">Pesta</span>
+                      <span className="tag">Dine-in</span>
+                    </div>
+                  </div>
+                  <IonCardContent className="venue-card-content">
                     <h3>Upperhills Convention Hall</h3>
                     <p>Jl. Metro Tj. Bunga No.995, Maccini, Kec. Makassar, Sulawesi Selatan 90242</p>
                     <p>Rp8.000.000,00/hari</p>
-                    <IonButton color="light" fill="solid" className="order-button">Pesan Sekarang</IonButton>
+                    <button className="order-button">Pesan Sekarang</button>
                   </IonCardContent>
                 </IonCard>
               </IonCol>
 
               <IonCol size="12" sizeMd="6">
                 <IonCard className="venue-card">
-                  <img src="./src/components/event2.jpg" alt="Lasaran Garden" />
-                  <IonCardContent>
+                  <div className="image-container">
+                    <img src="./src/components/event2.jpg" alt="Lasaran Garden" />
+                    <div className="category-tags">
+                      <span className="tag">Pesta</span>
+                      <span className="tag">Dine-in</span>
+                    </div>
+                  </div>
+                  <IonCardContent className="venue-card-content">
                     <h3>Lasaran Garden</h3>
                     <p>Jl. Abdullah Daeng Sirua No.108, Masale, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231</p>
                     <p>Rp8.000.000,00/hari</p>
-                    <IonButton color="danger" fill="solid">Pesan Sekarang</IonButton>
+                    <button className="order-button">Pesan Sekarang</button>
                   </IonCardContent>
                 </IonCard>
               </IonCol>
 
               <IonCol size="12" sizeMd="6">
                 <IonCard className="venue-card">
-                  <img src="./src/components/event3.jpg" alt="The Culture Club Makassar" />
-                  <IonCardContent>
+                  <div className="image-container">
+                    <img src="./src/components/event3.jpg" alt="The Culture Club Makassar" />
+                    <div className="category-tags">
+                      <span className="tag">Pesta</span>
+                      <span className="tag">Dine-in</span>
+                    </div>
+                  </div>
+                  <IonCardContent className="venue-card-content">
                     <h3>The Culture Club Makassar</h3>
                     <p>Jl. Gontang Raya No.15, Tamalate, Kota Makassar, Sulawesi Selatan 90242</p>
                     <p>Rp8.000.000,00/hari</p>
-                    <IonButton color="danger" fill="solid">Pesan Sekarang</IonButton>
+                    <button className="order-button">Pesan Sekarang</button>
                   </IonCardContent>
                 </IonCard>
               </IonCol>
 
               <IonCol size="12" sizeMd="6">
                 <IonCard className="venue-card">
-                  <img src="./src/components/event4.jpeg" alt="Four.venue" />
-                  <IonCardContent>
+                  <div className="image-container">
+                    <img src="./src/components/event4.jpeg" alt="Four.venue" />
+                    <div className="category-tags">
+                      <span className="tag">Pesta</span>
+                      <span className="tag">Dine-in</span>
+                    </div>
+                  </div>
+                  <IonCardContent className="venue-card-content">
                     <h3>Four.venue</h3>
                     <p>Jl. Masjid H Salimah, Tamalanrea Jaya, Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan 90245</p>
                     <p>Rp8.000.000,00/hari</p>
-                    <IonButton color="danger" fill="solid">Pesan Sekarang</IonButton>
+                    <button className="order-button">Pesan Sekarang</button>
                   </IonCardContent>
                 </IonCard>
               </IonCol>
