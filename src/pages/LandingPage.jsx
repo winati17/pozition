@@ -27,7 +27,7 @@ const LandingPage = () => {
       <IonHeader>
         <IonToolbar>
           <IonAvatar slot="end" className="profile-avatar">
-            <img src="./src/pages/profile.png" alt="Profil" />
+            <img src="./src/components/profile.png" alt="Profil" />
           </IonAvatar>
         </IonToolbar>
       </IonHeader>
@@ -37,7 +37,7 @@ const LandingPage = () => {
         </div>
         {/* Hero Section */}
         <div className="hero-section">
-          <img src="./src/pages/hero-image.jpg" alt="Hero" className="hero-image" />
+          {/* <img src="./src/components/hero-image.jpg" alt="Hero" className="hero-image" /> */}
           <div className="hero-text">
             <h1>Temukan Venue Sempurna Anda</h1>
             <p>Temukan dan pesan venue yang menakjubkan untuk acara Anda</p>
@@ -69,17 +69,19 @@ const LandingPage = () => {
         {/* Venue Cards */}
         <div className="venue-card-container">
           <IonCard className="venue-card">
-            <img src="./src/pages/venue.png" alt="Venue" />
+            <img src="./src/components/event1.jpg" alt="Venue" />
             <IonCardContent>
               <p>Deskripsi Venue</p>
             </IonCardContent>
           </IonCard>
           <IonCard className="venue-card">
+          <img src="./src/components/event2.jpg" alt="Venue" />
             <IonCardContent>
               <p>Venue Lainnya</p>
             </IonCardContent>
           </IonCard>
           <IonCard className="venue-card">
+          <img src="./src/components/event3.jpg" alt="Venue" />
             <IonCardContent>
               <p>Venue Lainnya</p>
             </IonCardContent>
