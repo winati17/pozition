@@ -11,10 +11,10 @@ import {
   IonItem,
   IonLabel,
   IonInput,
-  IonDatetime,
   IonButton,
+  IonCard,
+  IonCardContent,
   IonText,
-  IonFooter,
 } from '@ionic/react';
 import './OrderPage.css';
 
@@ -22,97 +22,95 @@ const OrderPage = () => {
   const [venue, setVenue] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [guests, setGuests] = useState('');
+  const [guests, setGuests] = useState(1); // Default to 1 guest
+  const pricePerGuest = 20; // Example price per guest
+  const totalCost = guests * pricePerGuest;
 
   const handleOrder = () => {
-    if (!venue || !date || !time || !guests) {
-      alert("Please fill out all fields.");
+    if (!venue || !date || !time || guests <= 0) {
+      alert("Please fill out all fields correctly.");
       return;
     }
-    alert(`Booking Confirmed for ${venue} on ${date} at ${time} for ${guests} guests.`);
+    const formattedDateTime = `${date} at ${time}`;
+    alert(`Booking confirmed for ${venue} on ${formattedDateTime} for ${guests} guests. Total cost: $${totalCost}`);
   };
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle className="order-title">Order Venue</IonTitle>
+          <IonTitle>Venue Booking</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonGrid className="order-container">
+        <IonGrid className="booking-grid">
           <IonRow>
-            <IonCol>
-              <IonItem className="order-input-item">
-                <IonLabel position="stacked">Venue Name</IonLabel>
-                <IonInput
-                  value={venue}
-                  placeholder="Enter venue name"
-                  onIonChange={(e) => setVenue(e.detail?.value || '')}
-                  className="order-input"
-                />
-              </IonItem>
-            </IonCol>
-          </IonRow>
+            {/* Input Form Section */}
+            <IonCol size="12" size-md="8">
+              <IonCard className="container">
+                <IonCardContent>
+                  <h3>Book Your Venue</h3>
 
-          <IonRow>
-            <IonCol>
-              <IonItem className="order-input-item">
-                <IonLabel position="stacked">Select Date</IonLabel>
-                <IonDatetime
-                  displayFormat="YYYY-MM-DD"
-                  placeholder="Select Date"
-                  onIonChange={(e) => setDate(e.detail?.value || '')}
-                  className="order-input"
-                />
-              </IonItem>
-            </IonCol>
-          </IonRow>
+                  <IonItem>
+                    <IonLabel position="stacked">Venue Name</IonLabel>
+                    <IonInput
+                      value={venue}
+                      placeholder="Enter venue name"
+                      onIonChange={(e) => setVenue(e.detail?.value || '')}
+                    />
+                  </IonItem>
 
-          <IonRow>
-            <IonCol>
-              <IonItem className="order-input-item">
-                <IonLabel position="stacked">Select Time</IonLabel>
-                <IonDatetime
-                  displayFormat="HH:mm"
-                  pickerFormat="HH:mm"
-                  placeholder="Select Time"
-                  onIonChange={(e) => setTime(e.detail?.value || '')}
-                  className="order-input"
-                />
-              </IonItem>
-            </IonCol>
-          </IonRow>
+                  <IonItem>
+                    <IonLabel position="stacked">Select Date</IonLabel>
+                    <IonInput
+                      type="date"
+                      value={date}
+                      placeholder="Select Date"
+                      onIonChange={(e) => setDate(e.detail?.value || '')}
+                    />
+                  </IonItem>
 
-          <IonRow>
-            <IonCol>
-              <IonItem className="order-input-item">
-                <IonLabel position="stacked">Number of Guests</IonLabel>
-                <IonInput
-                  type="number"
-                  value={guests}
-                  placeholder="Enter number of guests"
-                  onIonChange={(e) => setGuests(e.detail?.value || '')}
-                  className="order-input"
-                />
-              </IonItem>
-            </IonCol>
-          </IonRow>
+                  <IonItem>
+                    <IonLabel position="stacked">Select Time</IonLabel>
+                    <IonInput
+                      type="time"
+                      value={time}
+                      placeholder="Select Time"
+                      onIonChange={(e) => setTime(e.detail?.value || '')}
+                    />
+                  </IonItem>
 
-          <IonRow>
-            <IonCol>
-              <IonButton expand="full" color="primary" onClick={handleOrder} className="order-button">
-                Confirm Booking
-              </IonButton>
+                  <IonItem>
+                    <IonLabel position="stacked">Number of Guests</IonLabel>
+                    <IonInput
+                      type="number"
+                      value={guests}
+                      placeholder="Enter number of guests"
+                      onIonChange={(e) => setGuests(Number(e.detail?.value) || 1)}
+                    />
+                  </IonItem>
+
+                  <IonButton expand="full" color="primary" onClick={handleOrder}>
+                    Confirm Booking
+                  </IonButton>
+                </IonCardContent>
+              </IonCard>
+            </IonCol>
+
+            {/* Total Cost Section */}
+            <IonCol size="12" size-md="4">
+              <IonCard className="container total-cost-container">
+                <IonCardContent>
+                  <IonText className="total-cost">
+                    <p>Total Cost</p>
+                    <h2>${totalCost}</h2>
+                  </IonText>
+                </IonCardContent>
+              </IonCard>
             </IonCol>
           </IonRow>
         </IonGrid>
       </IonContent>
-      <IonFooter>
-        <IonToolbar>
-          <IonText className="footer-text">&copy; 2024 Pozition</IonText>
-        </IonToolbar>
-      </IonFooter>
     </IonPage>
   );
 };
