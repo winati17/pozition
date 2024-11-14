@@ -10,7 +10,6 @@ import {
   IonCol,
   IonRouterLink,
 } from '@ionic/react';
-import 'swiper/css';
 import './Venue.css';
 import Footer from '../components/Footer/Footer'
 

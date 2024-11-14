@@ -11,7 +11,6 @@ import {
   IonIcon,
   IonRouterLink,
 } from '@ionic/react';
-import 'swiper/css';
 import { star, peopleCircle, cash, searchOutline } from 'ionicons/icons';
 import './LandingPage.css';
 import Footer from '../components/Footer/Footer'
