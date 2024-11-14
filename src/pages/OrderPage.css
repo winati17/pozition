@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
@@ -54,6 +55,12 @@ ion-label {
     margin-bottom: 4px;
 }
 
+.order-button {
+    --background: #b31b3e;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
 ion-input {
     --padding-start: 12px;
     --padding-end: 12px;
@@ -64,10 +71,13 @@ ion-input {
     color: #3b1212;
     height: 40px;
     width: 100%;
-    /* Ensure inputs take full width */
 }
 
-/* Full width for button */
+.order-button:hover {
+    background-color: #b31b3e;
+    color : white;
+}
+
 ion-button {
     width: 100%;
     --border-radius: 5px;
@@ -145,4 +155,14 @@ ion-button:hover {
     color: #fff;
     padding: 4px 15px;
     border-radius: 20px;
+    padding: 8px;
 }
+
+@media (min-width: 768px) {
+    .order-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/*ternyata tiap css bisa memengaruhi css yg lain*/

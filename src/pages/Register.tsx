@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom'
 import { toast } from '../toast'
 import { registerUser } from '../firebaseConfig'
 
-const Home:React.FC = () => {
+const Register:React.FC = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [cpassword, setCPassword] = useState('')
