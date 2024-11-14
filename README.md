@@ -16,7 +16,7 @@ Kelompok kami membuat sebuah platform penyewaan venue untuk acara.
   ```bash
   git clone https://github.com/winati17/pozition.git
   npm install
-  ionic serve    (untuk menjalankan website secara lokal)
+  ionic serve #untuk menjalankan website secara lokal
 
 
 
