@@ -15,6 +15,7 @@ import {
   IonCard,
   IonCardContent,
   IonText,
+  IonRouterLink
 } from '@ionic/react';
 import './OrderPage.css';
 
@@ -22,8 +23,8 @@ const OrderPage = () => {
   const [venue, setVenue] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [guests, setGuests] = useState(1); // Default to 1 guest
-  const pricePerGuest = 20; // Example price per guest
+  const [guests, setGuests] = useState(1);
+  const pricePerGuest = 20;
   const totalCost = guests * pricePerGuest;
 
   const handleOrder = () => {
@@ -38,11 +39,25 @@ const OrderPage = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Venue Booking</IonTitle>
-        </IonToolbar>
+        <div className="custom-header">
+          <div className="logo">poZition</div>
+          <nav className="navbar">
+            <IonRouterLink routerLink="/landing" className="nav-link">
+              Home
+            </IonRouterLink>
+            <IonRouterLink routerLink="/venue" className="nav-link">
+              Venue
+            </IonRouterLink>
+            <IonRouterLink routerLink="/order" className="nav-link ">
+              Order
+            </IonRouterLink>
+            <IonRouterLink routerLink="/login" className="nav-link">
+              Masuk/Daftar
+            </IonRouterLink>
+          </nav>
+        </div>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent>
         <IonGrid className="booking-grid">
           <IonRow>
             {/* Input Form Section */}
