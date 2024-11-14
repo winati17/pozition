@@ -10,7 +10,6 @@ import {
   IonLoading,
 } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
-import "./Home.css";
 import { useEffect, useState } from "react";
 // import { showToast } from "../toast";
 import { signUpUser } from "../firebaseConfig";

@@ -1,38 +1,24 @@
 ## POZITION
 
-Kelompok 6 Mata Kuliah Sistem Informasi Teknik Informatika. 
+Kelompok 6 Mata Kuliah Sistem Informasi Teknik Informatika Kelas A Angkatan 2022. 
 
 Kelompok kami membuat sebuah platform penyewaan venue untuk acara. 
 
-
-## Table of Contents
-- [Project Structure](#projectstructure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-  
-
-## Project Structure
-
-- `/public` – Folder template berisi manifest (informasi app) dan logo Ionic 
-- `/src` – Berisi folder component (gambar), page (halaman app), theme (variabel css), dan file-file konfigurasi Firebase
-
+## Contributor
+1. Fathinah Nur Jannah (D121221002) : page sign up & konfigurasi firebase
+2. Jonathan Chandra (D121221004) : page login & konfigurasi firebase
+3. M Mirsa Bintang Muharram (D121221009) : membuat page order
+4. Winati Mutmainnah (D121221014) : membuat landing page & page venue
+5. Javahirul Rifat (D121221021): membuat page detail venue
+6. Arifah Deswina (D121221030): membuat footer
 
 ## Installation
 Clone repository
-    ```bash
-   git clone https://github.com/winati17/pozition.git
+  ```bash
+  git clone https://github.com/winati17/pozition.git
 
 ## Usage 
   ionic serve    untuk memulai aplikasi
 
-## Contributing 
-1. Fork repository
-2. Buat feature branch baru
-3. Kontribusikan perubahan yang diinginkan
-4. Buat pull request
 
-## Licence
-MIT Licence 
 
