@@ -3,8 +3,6 @@ import {
   IonContent,
   IonHeader,
   IonPage,
-  IonToolbar,
-  IonTitle,
   IonGrid,
   IonRow,
   IonCol,
@@ -48,7 +46,7 @@ const OrderPage = () => {
             <IonRouterLink routerLink="/venue" className="nav-link">
               Venue
             </IonRouterLink>
-            <IonRouterLink routerLink="/order" className="nav-link ">
+            <IonRouterLink routerLink="/order" className="nav-link active">
               Order
             </IonRouterLink>
             <IonRouterLink routerLink="/login" className="nav-link">

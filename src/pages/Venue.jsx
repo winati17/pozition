@@ -5,16 +5,13 @@ import {
   IonPage,
   IonCard,
   IonCardContent,
-  IonToolbar,
   IonGrid,
   IonRow,
   IonCol,
-  IonFooter,
-  IonText,
   IonRouterLink,
 } from '@ionic/react';
-import 'swiper/css';
 import './Venue.css';
+import Footer from '../components/Footer/Footer'
 
 const Venue = () => {
   return (
@@ -192,6 +189,7 @@ const Venue = () => {
 
           </IonRow>
         </IonGrid>
+        <Footer/>
       </IonContent>
     </IonPage >
   );

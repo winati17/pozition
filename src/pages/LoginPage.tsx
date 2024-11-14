@@ -8,14 +8,12 @@ import {
     IonIcon,
     IonInput
 } from '@ionic/react'
-import { homedir } from 'os'
 
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { loginUser } from '../firebaseConfig'
-import { toast } from '../toast'
 
-const Home:React.FC = () => {
+const Login:React.FC = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
@@ -44,4 +42,4 @@ const Home:React.FC = () => {
     )
 }
 
-export default Home
+export default Login
