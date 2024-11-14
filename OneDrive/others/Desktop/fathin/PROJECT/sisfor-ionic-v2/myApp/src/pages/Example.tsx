@@ -12,11 +12,11 @@ const Example: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Example</IonTitle>
+          <IonTitle>Hello!</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen className="ion-padding">
-        Hello example
+        <p>Hello example</p>
       </IonContent>
     </IonPage>
   );
