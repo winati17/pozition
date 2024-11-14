@@ -13,12 +13,10 @@ Kelompok kami membuat sebuah platform penyewaan venue untuk acara.
 6. Arifah Deswina (D121221030): membuat footer
 
 ## Installation
-Clone repository
   ```bash
   git clone https://github.com/winati17/pozition.git
-
-## Usage 
-  ionic serve    untuk memulai aplikasi
+  npm install
+  ionic serve    (untuk menjalankan website secara lokal)
 
 
 
