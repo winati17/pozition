@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
@@ -27,7 +28,6 @@ body {
 
 .order-button {
     --background: #b31b3e;
-    color: rgb(18, 72, 210);
     margin-top: 20px;
     font-weight: 700;
     width: 100%;
@@ -35,7 +35,8 @@ body {
 }
 
 .order-button:hover {
-    background-color: #a10c33;
+    background-color: #b31b3e;
+    color : white;
 }
 
 .footer-text {
@@ -60,3 +61,5 @@ body {
         margin: 0 auto;
     }
 }
+
+/*ternyata tiap css bisa memengaruhi css yg lain*/
