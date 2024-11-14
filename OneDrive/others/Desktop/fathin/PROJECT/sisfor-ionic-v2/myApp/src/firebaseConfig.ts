@@ -1,7 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { createUserWithEmailAndPassword, getAuth, prodErrorMap, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, prodErrorMap, signInWithEmailAndPassword, onAuthStateChanged, User } from 'firebase/auth';
 // import { showToast } from "./toast";
 // import { app } from './firebaseConfig'; 
 
@@ -20,6 +20,20 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
+
+export function getCurrentUser() {
+  return new Promise<User | null>((resolve, reject) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        resolve(user);
+      } else {
+        resolve(null);
+      }
+      unsubscribe();
+    });
+  });
+}
+
 
 export async function loginUser(username: string, password: string) {
   const email = '$(username)@sisfor.com'
