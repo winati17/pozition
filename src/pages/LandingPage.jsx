@@ -158,9 +158,10 @@ const LandingPage = () => {
             </IonRow>
           </IonGrid>
         </div>
+        <Footer/>
       </IonContent>
   
-      <Footer/>
+      
     </IonPage>
   );
 };
