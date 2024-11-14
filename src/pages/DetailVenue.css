@@ -131,3 +131,24 @@ body {
 .info {
   color: white;
 }
+
+@media (min-width: 1024px) {
+  .detailinfo {
+    padding: 40px 60px;
+  }
+
+  .custom-row {
+    height: auto;
+  }
+
+  .custom-col {
+    width: 22%;
+    height: 120px;
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+
+  .facility h5 {
+    font-size: 1.1rem;
+  }
+}

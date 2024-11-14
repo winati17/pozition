@@ -3,26 +3,16 @@ import {
   IonContent,
   IonHeader,
   IonPage,
-  IonSearchbar,
-  IonCard,
-  IonCardContent,
-  IonAvatar,
-  IonToolbar,
   IonGrid,
   IonRow,
   IonCol,
-  IonButton,
-  IonFooter,
-  IonIcon,
-  IonText,
-  IonList,
-  IonItem,
   IonRouterLink
 } from '@ionic/react';
 import './DetailVenue.css';
 import venuePic from '../components/venuepic.png';
 import iconStar from '../components/staricon.png';
-import {icons} from '../components/icons';
+import {icons} from '../components/icons.';
+
 
 const DetailVenue = () => {
   return (
