@@ -25,7 +25,7 @@ Clone repository
    git clone https://github.com/winati17/pozition.git
 
 ## Usage 
-  npm start    untuk memulai aplikasi
+  ionic serve    untuk memulai aplikasi
 
 ## Contributing 
 1. Fork repository
