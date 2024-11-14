@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage';
 import OrderPage from './pages/OrderPage';
 import Venue from './pages/Venue';
 import Login from './pages/LoginPage';
+import DetailVenue from './pages/DetailVenue';
 
 import '@ionic/react/css/core.css';
 import './theme/variables.css';
@@ -19,6 +20,7 @@ const App = () => (
         <Route exact path="/venue" component={Venue} />
         <Route exact path="/order" component={OrderPage} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/detail-venue" component={DetailVenue} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

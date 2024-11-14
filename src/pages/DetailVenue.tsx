@@ -31,10 +31,10 @@ const DetailVenue = () => {
         <div className="custom-header">
           <div className="logo">poZition</div>
           <nav className="navbar">
-            <IonRouterLink routerLink="/landing" className="nav-link active">
+            <IonRouterLink routerLink="/landing" className="nav-link">
               Home
             </IonRouterLink>
-            <IonRouterLink routerLink="/venue" className="nav-link">
+            <IonRouterLink routerLink="/venue" className="nav-link active">
               Venue
             </IonRouterLink>
             <IonRouterLink routerLink="/order" className="nav-link">
